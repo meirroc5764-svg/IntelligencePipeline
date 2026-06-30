@@ -1,1 +1,11 @@
-ECHO is on.
+using System;
+namespace Enumerations
+{
+    public enum Classification
+    {
+        Unclassified,
+        Restricted,
+        Secret,
+        TopSecret
+    }
+}

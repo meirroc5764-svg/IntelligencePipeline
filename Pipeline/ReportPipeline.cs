@@ -1,1 +1,5 @@
-ECHO is on.
+using System;
+namespace ProcessingPipeline
+{
+
+}
