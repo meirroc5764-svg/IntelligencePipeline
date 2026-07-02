@@ -26,21 +26,21 @@ namespace ReportHierarchy
             }  
         }
 
-        public double Latitude { get => _latitude; set => _latitude = value; }
+        public double Latitude { get => _latitude; protected set => _latitude = value; }
 
-        public double Longitude { get => _longitude; set => _longitude = value; }
+        public double Longitude { get => _longitude; protected set => _longitude = value; }
 
-        public string Description { get => _description; set => _description = value; }
+        public string Description { get => _description; protected set => _description = value; }
 
-        public ReportStatus Status { get => _status; set => _status = value; }
+        public ReportStatus Status { get => _status; protected set => _status = value; }
 
-        public Priority Priority { get => _priority; set => _priority = value; }
+        public Priority Priority { get => _priority; protected set => _priority = value; }
 
-        public Classification Classification { get => _classification; set => _classification = value; }
+        public Classification Classification { get => _classification; protected set => _classification = value; }
 
-        public int ReliabilityScore { get => _reliabilityScore ; set => _reliabilityScore = value; }
+        public int ReliabilityScore { get => _reliabilityScore ; protected set => _reliabilityScore = value; }
 
-        public string RejectionReason { get => _rejectionReason; set => _rejectionReason = value; }
+        public string RejectionReason { get => _rejectionReason; protected set => _rejectionReason = value; }
 
         protected Report(int reportId, DateTime timestamp, double latitude, double longitude, string description)
         {
