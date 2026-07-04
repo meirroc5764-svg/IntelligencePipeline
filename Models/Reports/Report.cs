@@ -1,6 +1,6 @@
-using Enumerations;
+using IntelligencePipeline.Models.Enums;
 using System;
-namespace ReportHierarchy
+namespace IntelligencePipeline.Models.Reports
 {
     public abstract class Report
     {

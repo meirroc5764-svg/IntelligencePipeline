@@ -1,4 +1,4 @@
-using ReportHierarchy;
+using IntelligencePipeline.Models.Reports;
 using System;
 using System.ComponentModel.DataAnnotations;
 namespace IntelligencePipeline.Validation

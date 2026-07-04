@@ -1,5 +1,5 @@
 using System;
-namespace Enumerations
+namespace IntelligencePipeline.Models.Enums
 {
     public enum Priority
     {

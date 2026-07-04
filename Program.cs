@@ -1,5 +1,5 @@
-﻿using Enumerations;
-using ReportHierarchy;
+﻿using IntelligencePipeline.Models.Enums;
+using IntelligencePipeline.Models.Reports;
 using System;
 using System.Net.NetworkInformation;
 namespace ProgramEntryPoint

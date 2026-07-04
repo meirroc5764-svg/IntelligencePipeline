@@ -1,5 +1,5 @@
 using System;
-namespace ReportHierarchy
+namespace IntelligencePipeline.Models.Reports
 {
     class DroneReport : Report
     {

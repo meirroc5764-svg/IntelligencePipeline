@@ -1,4 +1,4 @@
-using ReportHierarchy;
+using IntelligencePipeline.Models.Reports;
 using System;
 using IntelligencePipeline.Validation;
 namespace IntelligencePipeline.Calculators

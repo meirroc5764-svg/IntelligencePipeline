@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 using static System.Net.Mime.MediaTypeNames;
-namespace ReportHierarchy
+namespace IntelligencePipeline.Models.Reports
 {
     class SoldierReport : Report
     {
