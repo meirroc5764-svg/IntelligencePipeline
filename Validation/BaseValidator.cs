@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace IntelligencePipeline.Validation
 {
     
-    abstract class BaseValidator
+    abstract class BaseValidator : IValidator
     {
         DateTime my_date = new DateTime(2020, 01, 01);
         DateTime DateNow = DateTime.Now;

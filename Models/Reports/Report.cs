@@ -40,7 +40,7 @@ namespace IntelligencePipeline.Models.Reports
 
         public int ReliabilityScore { get => _reliabilityScore ; protected set => _reliabilityScore = value; }
 
-        public string RejectionReason { get => _rejectionReason; protected set => _rejectionReason = value; }
+        public string RejectionReason { get => _rejectionReason; set => _rejectionReason = value; }
 
         protected Report(int reportId, DateTime timestamp, double latitude, double longitude, string description)
         {

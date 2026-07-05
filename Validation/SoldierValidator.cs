@@ -2,7 +2,7 @@ using IntelligencePipeline.Models.Reports;
 using System;
 namespace IntelligencePipeline.Validation
 {
-    class SoldierValidator : BaseValidator
+    class SoldierValidator : BaseValidator, IValidator
     {
         protected override ValidationResult ValidateSpecificFields(Report report)
         {

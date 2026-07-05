@@ -2,7 +2,7 @@ using IntelligencePipeline.Models.Reports;
 using System;
 namespace IntelligencePipeline.Validation
 {
-    class DroneValidator : BaseValidator
+    class DroneValidator : BaseValidator,IValidator
     {
         protected override ValidationResult ValidateSpecificFields(Report report)
         {
