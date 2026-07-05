@@ -34,9 +34,9 @@ namespace IntelligencePipeline.Models.Reports
 
         public ReportStatus Status { get => _status; set => _status = value; }
 
-        public Priority Priority { get => _priority; protected set => _priority = value; }
+        public Priority Priority { get => _priority; set => _priority = value; }
 
-        public Classification Classification { get => _classification; protected set => _classification = value; }
+        public Classification Classification { get => _classification; set => _classification = value; }
 
         public int ReliabilityScore { get => _reliabilityScore ; set => _reliabilityScore = value; }
 
