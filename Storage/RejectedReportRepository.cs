@@ -28,7 +28,7 @@ namespace IntelligencePipeline.Storage
             List<Report> result = new List<Report>();
             foreach (Report regectReport in _rejectedReports)
             {
-                if (Regex.IsMatch(regectReport.Description, $@"\b{keyword}\b", RegexOptions.IgnoreCase))
+                if (Regex.IsMatch(regectReport.Description, $@"\b{reasonKeyword}\b", RegexOptions.IgnoreCase))
                 {
                     result.Add(regectReport);
                 }
