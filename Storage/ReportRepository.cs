@@ -57,13 +57,13 @@ namespace IntelligencePipeline.Storage
 
         public Report GetById(int reportId)
         {
-            List<Report> result = new List<Report>();
+            
             foreach (Report report in _reports)
             {
                 if (report.ReportId == reportId)
-                    result.Add(report);
+                    return report;
             }
-            return result;
+            return null;
         }
         public void UpdateStatus(int reportId, ReportStatus newStatus)
         {
