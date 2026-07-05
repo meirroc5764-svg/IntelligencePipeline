@@ -1,3 +1,4 @@
+using IntelligencePipeline.Calculators;
 using IntelligencePipeline.Models.Enums;
 using IntelligencePipeline.Models.Reports;
 using IntelligencePipeline.Storage;
@@ -72,15 +73,23 @@ namespace ProcessingPipeline
                 report.RejectionReason = result.ErrorMessage;
                 _rejectedReports.Add( report );
             }
-            _validatedReports.Add( report );
+            report.Status = ReportStatus.Validated;
+
         }
         private void CalculateMetrics(Report report)
         {
+            ReliabilityCalculator culculator = new ReliabilityCalculator();
+            report.ReliabilityScore = culculator.Calculate(report);
 
+            PriorityCalculator priorityCalculator = new PriorityCalculator();
+            priorityCalculator.Calculate(report);
+
+            ClassificationCalculator classificationCalculator = new ClassificationCalculator();
+            classificationCalculator.Calculate(report);
         }
         private void StoreReport(Report report)
         {
-
+            _validatedReports.Add(report);
         }
     }
 }

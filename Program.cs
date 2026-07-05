@@ -1,5 +1,6 @@
 ﻿using IntelligencePipeline.Models.Enums;
 using IntelligencePipeline.Models.Reports;
+using IntelligencePipeline.Storage;
 using System;
 using System.Net.NetworkInformation;
 namespace ProgramEntryPoint
@@ -23,5 +24,8 @@ namespace ProgramEntryPoint
             //Console.WriteLine(t);
             //Console.WriteLine(t2);
         }
+        //private static void DisplayReport(Report report)
+        //private static void DisplayValidatedReports(ReportRepository repository)
+        //private static void DisplayRejectedReports(RejectedReportRepository repository)
     }
 }

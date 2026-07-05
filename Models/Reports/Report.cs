@@ -38,7 +38,7 @@ namespace IntelligencePipeline.Models.Reports
 
         public Classification Classification { get => _classification; protected set => _classification = value; }
 
-        public int ReliabilityScore { get => _reliabilityScore ; protected set => _reliabilityScore = value; }
+        public int ReliabilityScore { get => _reliabilityScore ; set => _reliabilityScore = value; }
 
         public string RejectionReason { get => _rejectionReason; set => _rejectionReason = value; }
 

@@ -9,8 +9,14 @@ namespace IntelligencePipeline.Calculators
         {
             int result = report.CalculateReliabilityScore();
 
-            if (result < 1 || result > 10)
-                ValidationResult.Failure(" sum is invalid");
+            if (result < 1)
+                
+                result = 1;
+            
+            
+            if (result > 10)
+
+                result = 10;
             
             return result;
         }
