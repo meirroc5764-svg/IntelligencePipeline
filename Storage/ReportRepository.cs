@@ -1,6 +1,7 @@
 using IntelligencePipeline.Models.Enums;
 using IntelligencePipeline.Models.Reports;
 using System;
+using System.Net.NetworkInformation;
 namespace IntelligencePipeline.Storage
 {
     class ReportRepository
@@ -29,6 +30,16 @@ namespace IntelligencePipeline.Storage
             return result;
         }
         public List<Report> GetByPriority(Priority priority)
+        {
+            List<Report> result = new List<Report>();
+            foreach (Report report in _reports)
+            {
+                if (report.Priority == priority)
+                    result.Add(report);
+            }
+            return result;
+        }
+            
 
         public List<Report> Search(string keyword)
         public Report GetById(int reportId)
