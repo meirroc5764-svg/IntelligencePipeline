@@ -79,6 +79,11 @@ namespace IntelligencePipeline.Storage
             return _reports.Count;
         }
         public int GetCountByStatus(ReportStatus status)
+        {
+            List<Report> list_report_by_status = GetByStatus(status);
+            return list_report_by_status.Count;
+        }
+
     }
     
 }
