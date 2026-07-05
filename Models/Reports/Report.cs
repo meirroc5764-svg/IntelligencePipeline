@@ -32,7 +32,7 @@ namespace IntelligencePipeline.Models.Reports
 
         public string Description { get => _description; protected set => _description = value; }
 
-        public ReportStatus Status { get => _status; protected set => _status = value; }
+        public ReportStatus Status { get => _status; set => _status = value; }
 
         public Priority Priority { get => _priority; protected set => _priority = value; }
 

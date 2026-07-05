@@ -2,6 +2,7 @@ using IntelligencePipeline.Models.Enums;
 using IntelligencePipeline.Models.Reports;
 using System;
 using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
 namespace IntelligencePipeline.Storage
 {
     class ReportRepository
@@ -40,11 +41,43 @@ namespace IntelligencePipeline.Storage
             return result;
         }
             
-
         public List<Report> Search(string keyword)
+        {
+            List<Report> result = new List<Report> ();
+            foreach (Report report in _reports)
+            {
+                if (Regex.IsMatch(report.Description, $@"\b{keyword}\b", RegexOptions.IgnoreCase))
+                {
+                    result.Add(report);
+                }
+            }
+
+            return result;
+        }
+
         public Report GetById(int reportId)
+        {
+            List<Report> result = new List<Report>();
+            foreach (Report report in _reports)
+            {
+                if (report.ReportId == reportId)
+                    result.Add(report);
+            }
+            return result;
+        }
         public void UpdateStatus(int reportId, ReportStatus newStatus)
+        {
+            List<Report> result = new List<Report>();
+            foreach (Report report in _reports)
+            {
+                if (report.ReportId == reportId)
+                    report.Status =  newStatus;
+            }
+        }
         public int GetTotalCount()
+        {
+            return _reports.Count;
+        }
         public int GetCountByStatus(ReportStatus status)
     }
     
